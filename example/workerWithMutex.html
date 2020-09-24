@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Example of Workers With Mutex</h1>
-    <h2>Workers With Mutex</h2>
+    <p>If you open the console and reload the page you will see that the first worker is always finished before the second one</p>
     <script>
       const lockData = new SharedArrayBuffer(4);
       const firstWorkerWithMutex = new Worker('workerWithMutex.js');
