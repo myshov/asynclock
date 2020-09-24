@@ -6,7 +6,9 @@
   </head>
   <body>
     <h1>Example of Simple Workers</h1>
-    <p>If you open the console and reload the page you will see that the order of the execution of the workers isn't stable</p>
+    <p>If you open the console and reload the page you will see that the order of the execution of the workers isn't stable
+       (the second worker may finish before the first one and vice versa)
+    </p>
     <script>
       const firstWorker = new Worker('worker.js');
       const secondWorker = new Worker('worker.js');

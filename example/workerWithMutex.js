@@ -9,7 +9,7 @@ self.addEventListener('message', (e) => {
 
   let time = Math.floor(Math.random() * 3000);
   setTimeout(() => {
-    console.log('worker', workerName, ': end, total time is', time);
+    console.log('worker', workerName, ': end, waited', time, 'ms');
     mutex.unlock();
   }, time);
 });
