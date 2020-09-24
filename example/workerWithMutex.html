@@ -12,8 +12,8 @@
       const firstWorkerWithMutex = new Worker('workerWithMutex.js');
       const secondWorkerWithMutex = new Worker('workerWithMutex.js');
 
-      firstWorkerWithMutex.postMessage({lockData, workerName: 'first'});
-      secondWorkerWithMutex.postMessage({lockData, workerName: 'second'});
+      firstWorkerWithMutex.postMessage({lockData, workerName: '#1'});
+      secondWorkerWithMutex.postMessage({lockData, workerName: '#2'});
     </script>
   </body>
 </html>
