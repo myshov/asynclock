@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Example of Simple Workers</title>
+  </head>
+  <body>
+    <h1>Example of Simple Workers</h1>
+    <script>
+      const firstWorker = new Worker('worker.js');
+      const secondWorker = new Worker('worker.js');
+
+      firstWorker.postMessage('first');
+      secondWorker.postMessage('second');
+    </script>
+  </body>
+</html>

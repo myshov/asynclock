@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>The Usage Example of AsyncLock</title>
+    <script src="../asynclock.js"></script>
+  </head>
+  <body>
+    <h1>The Usage Example of AsyncLock</h1>
+    <h2>Workers With Mutex</h2>
+    <script>
+      const sharedData = new SharedArrayBuffer(4);
+      const firstWorkerWithMutex = new Worker('firstWorkerWithMutex.js');
+      const secondWorkerWithMutex = new Worker('secondWorkerWithMutex.js');
+
+      firstWorkerWithMutex.postMessage(sharedData);
+      secondWorkerWithMutex.postMessage(sharedData);
+    </script>
+    <script>
+      const firstWorker = new Worker('firstWorker.js');
+      const secondWorker = new Worker('secondWorker.js');
+
+      firstWorker.postMessage({});
+      secondWorker.postMessage({});
+    </script>
+  </body>
+</html>
