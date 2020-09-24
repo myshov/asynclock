@@ -1,0 +1,18 @@
+{
+  "name": "asynclock",
+  "version": "1.0.0",
+  "description": "Example of Usage of AsyncLock",
+  "main": "asynclock.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "http-server -o example/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Myshov (http://myshov.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
